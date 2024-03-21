@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    --famliy: 'Lexend Deca',
+        sans-serif;
+    --radius: 6px;
+
+}
+
+#todo {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    font-family: var(--famliy);
+}
+
+.container {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 10px 10px 10px grey;
+}
+
+.todo-add {
+    width: 100%;
+}
+
+.todo-add form {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin: 1.1rem 0;
+    border-radius: var(--radius);
+    box-shadow: 0 0 20px 10px #f5dcbb;
+}
+
+
+form input {
+    width: 80%;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    padding: 0 10px;
+    border-radius: 4px 0 0 4px;
+    font-family: var(--famliy);
+}
+
+form button {
+    width: 20%;
+    border: none;
+    background-color: mediumaquamarine;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+    font-family: var(--famliy);
+}
+
+.todo-list span {
+    display: inline-block;
+    color: #9e9e9e;
+    font-size: .8rem;
+    margin-top: 10px;
+}
+
+
+.todo-list li {
+    display: flex;
+    min-height: 70px;
+    padding: 0 10px 0 0;
+    align-items: center;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 0 10px 4px #f5dcbb;
+}
+
+.todo-list li .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: .3rem;
+}
+
+.todo-list button {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 .3rem;
+}
+
+button img {
+    width: 100%;
+    height: 100%;
+}
+
+.delete-all {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    border-bottom: 1px solid red;
+    height: 20px;
+    font-family: var(--famliy);
+}
+
+.empty {
+    text-align: center;
+}
+
+@media (max-width:400px) {
+    .todo-list li {
+        font-size: .7rem;
+        margin: 10px 0;
+        min-height: 60px;
+    }
+
+    .todo-list span {
+        font-size: .5rem;
+    }
+
+    form {
+        height: 40px !important;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    .delete-all {
+        font-size: 14px;
+    }
+}
