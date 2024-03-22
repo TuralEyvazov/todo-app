@@ -74,10 +74,10 @@ const showData = () => {
             } alt="">
           </button>
           <div class="text">
-          <p>
+          <p style=${item.checked && "text-decoration:line-through"}>
             ${item.todo}
           </p>
-          <span>
+          <span class="date">
           ${item.date}
           </span>
           </div>
@@ -111,12 +111,10 @@ const editList = (id) => {
 };
 
 const deleteList = (id) => {
-  let isDelete = confirm("silinsin");
-
+  let isDelete = confirm("Delete?");
   if (!isDelete) {
     return;
   }
-
   let deleteLists = todos.filter((item) => item.id !== id);
   todos = deleteLists;
   setLocalStorage(todos);
@@ -124,7 +122,7 @@ const deleteList = (id) => {
 };
 
 const deleteAll = () => {
-  let isDelete = confirm("silinsin");
+  let isDelete = confirm("Delete All");
 
   if (!isDelete) {
     return;
