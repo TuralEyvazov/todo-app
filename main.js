@@ -36,7 +36,7 @@ form.addEventListener("submit", (e) => {
   }
 
   let date = new Date();
-  let today = `${date.getDate()}.${
+  let today = `${date.getDay() < 10 && "0" + date.getDay()}.${
     date.getMonth() + 1 < 10 && "0" + (date.getMonth() + 1)
   }.${date.getFullYear()}`;
 
@@ -103,9 +103,9 @@ const checkClick = (id) => {
 };
 
 const editList = (id) => {
-  let editLists = todos.find((item) => item.id === id);
-  let edit = prompt(`${editLists.todo}`);
-  edit && (editLists.todo = edit.trim());
+  let editList = todos.find((item) => item.id === id);
+  let edit = prompt(`${editList.todo}`);
+  edit && (editList.todo = edit.trim());
   setLocalStorage(todos);
   showData();
 };
